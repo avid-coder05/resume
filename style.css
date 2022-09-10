@@ -1,0 +1,69 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: url("wall_2.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: auto;
+	font-family: monospace;
+}
+.jump {
+	height: 10px;
+}
+#strip {
+	height: 35px;
+	background: linear-gradient(to bottom, #031836, #140102);
+	position: sticky;
+	top: 0;
+	font-size: 1.35em;
+	z-index: 1;
+}
+.head-1 {
+	text-align: center;
+	background: linear-gradient(to bottom right, #0c031f, #0c031f, #0c031f, #5e3a01);
+	color: #f6fce6;
+	font-size: 8em;
+}
+#space {
+	height: 130px;
+	background: ;
+}
+.head-2 {
+	background: linear-gradient(to bottom right, #0c031f, #0c031f, #0c031f, #5e3a01);
+	font-size: 2.75em;
+	color: #f6fce6;
+	text-align: center;
+}
+#space-2 {
+	height: 300px;
+	background: ;
+}
+#me {
+	align-self: center;
+	height: 25%;
+	width: 30%;
+	border-radius: 100%;
+	border: 4px double #371470;
+}
+#info {
+	background: linear-gradient(to top left, #0c031f, #0c031f, #0c031f, #5e3a01);
+	color: #f6fce6;
+	font-size: 1.5em;
+	text-align: center;
+}
+#logo {
+	background: white;
+}
+#logo-2 {
+	height: 3%;
+	width: 3%;
+}
+#logo-3 {
+	height: 5%;
+	width: 5%;
+}
+#cube {
+	height: 10%;
+	width: 20%;
+}
