@@ -4,9 +4,9 @@ html {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 body {
-	background-color: rgb(102, 32, 55);
+	background-color: rgb(38, 0, 41);
 }
-.container {
+#container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -15,17 +15,18 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	z-index: 10;
 }
 .navbar-content {
-	background-color: rgba(0, 91, 143, 0.9);
-	border-radius: 30px;
-	height: 4vh;
-	width: 50vw;
-	padding-left: 2vw;
-	padding-right: 2vw;
+	background-color: rgba(69, 0, 87, 0.801);
+	border-radius: 0px 30px;
+	height: 5%;
+	min-width: 50vw;
+	padding-left: 2%;
+	padding-right: 2%;
 	position: fixed;
-	top: 0.5vh;
-	font-size: larger;
+	top: 1%;
+	font-size: 110%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -43,13 +44,25 @@ a {
 .about-me {
 	background-image: url("RDT_20230704_0938041030384955620544071.jpg");
 	width: 100vw;
-	height: 100dvh;
+	min-height: 100dvh;
 	display: flex;
 	align-items: center;
 	margin-bottom: 2vh;
 }
 #about-hello {
 	font-family: monospace;
+	font-size: 300%;
+	width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: typing;
+	animation-duration: 5s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
 }
 #self-photo {
 	height: 50vh;
@@ -60,85 +73,142 @@ a {
 	box-shadow: 10px 10px 5px rgba(192, 192, 192, 0.534);
 }
 #about-me-text {
-	background-color: rgba(0, 91, 143, 0.39);
-	margin-left: 5vw;
-	padding-left: 0.5vw;
-	padding-right: 0.5vw;
-	padding-bottom: 0.5vh;
-	width: 28vw;
-	height: 50vh;
-	font-size: 1.5rem;
+	background-color: rgba(123, 59, 139, 0.801);
+	margin-left: 5%;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	width: 28%;
+	font-size: 125%;
 	border-radius: 20px;
 }
 p {
-	background-color: rgba(192, 192, 192, 0.479);
-	color: rgb(26, 0, 75);
+	/* background-color: rgba(192, 192, 192, 0.479); */
+	color: rgb(221, 202, 255);
 	padding: 1vh 1vw 0.5vh 1vh;
 	border-radius: 20px;
 }
 .edu-header {
-	padding: 0.5vh 2vw;
+	padding: 0.5% 2%;
 	border-radius: 20px;
 }
-#section-h1 {
-	font-size: 4rem;
-}
 hr {
-	width: 99vw;
+	width: 100%;
 }
 .education {
 	display: flex;
-	width: 80vw;
-	justify-content: space-evenly;
-	height: 80vh;
+	width: 80%;
+	min-height: 85vh;
 	align-items: center;
 }
 #edu-card {
 	display: flex;
-	background-color: rgba(0, 91, 143, 0.39);
-	padding-top: 2vh;
-	width: 20vw;
-	height: 50vh;
+	flex-direction: column;
+	background-color: rgba(123, 59, 139, 0.801);
+	justify-content: center;
+	margin-top: 1%;
+	margin-left: 8%;
+	margin-bottom: 3%;
+	padding-top: 2%;
+	padding-left: 0.4%;
+	padding-right: 0.4%;
+	width: 40%;
+	min-height: 50%;
 	border-radius: 20px;
 	text-align: center;
-	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 	box-shadow: 10px 10px 5px rgba(192, 192, 192, 0.534);
 }
 #college-logo {
-	height: 19vh;
-	width: 10vw;
+	max-width: 30%;
+}
+#school-logo {
+	max-width: 35%;
+	background-color: white;
 }
 #p-college {
-	font-size: 1.3rem;
-	width: 16vw;
+	font-size: 120%;
+	width: 80%;
 	padding-bottom: 1vh;
 }
 #skills {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	min-height: 90vh;
 }
 .skill-card {
-	background-color: rgba(0, 91, 143, 0.39);
+	background-color: rgb(100, 0, 70);
 	display: flex;
 	flex-direction: column;
-	text-align: center;
 	align-items: center;
-	width: 14vw;
-	height: 35vh;
+	justify-content: center;
+	min-width: 14vw;
+	min-height: 35vh;
 	margin: 2vw;
-	justify-content: space-around;
 	border-radius: 20px;
+	transition-property: background-color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
 }
 .skill-card-img {
+	position: relative;
+	margin-top: 10%;
 	width: 10vw;
 }
 #skill-trans {
 	background-color: white;
 }
+#skill-title {
+	font-size: 0%;
+	margin-top: 15%;
+	font-weight: bolder;
+	transition-property: font-size;
+	transition-duration: 0.35s;
+	transition-timing-function: ease-in;
+}
+.skill-card:hover {
+	background-color: rgba(123, 59, 139, 0.801);
+}
+.skill-card:hover #skill-title {
+	font-size: 175%;
+}
+.section-header {
+	background-color: rgba(123, 59, 139, 0.801);
+	background-image: url("./pngwing.com.png");
+	width: 100%;
+	font-size: 175%;
+	text-decoration: underline;
+}
 .footer {
-	background-color: rgb(26, 0, 59);
-	width: 100vw;
+	background-color: rgba(123, 59, 139, 0.801);
+	background-image: url("https://static.thenounproject.com/png/897310-200.png");
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 4%;
+	padding-bottom: 5%;
+	text-align: center;
+}
+.social {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 2%;
+}
+#foot-div {
+	max-width: 10vw;
+	display: flex;
+}
+.logo {
+	background-color: rgb(214, 212, 212);
+	border-radius: 20%;
+	width: 30%;
+}
+#email{
+	font-size: 150%;
+}
+#footer-msg {
+	font-size: 120%;
+	padding-left: 2%;
+	text-decoration: underline;
 }
